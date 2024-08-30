@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <!-- Collegamento al file CSS specifico per quiz.html -->
+    <link rel="stylesheet" href="quiz-style.css">
+    <!-- JavaScript per la gestione del quiz -->
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const answer1 = document.getElementById("quiz-answer-1").value.toLowerCase();
+            const answer2 = document.getElementById("quiz-answer-2").value.toLowerCase();
+            const answer3 = document.getElementById("quiz-answer-3").value.toLowerCase();
+
+            if (answer1 === "italia") score++;
+            if (answer2 === "vomitando") score++;
+            if (answer3 === "ankara") score++;
+
+            const discoverButton = document.getElementById("discover-button");
+
+            if (score === 3) {
+                alert("3 su 3! Hai vinto il premio più un bacio (o forse più)! Ora puoi cliccare su 'Scopri il tuo regalo'.");
+                discoverButton.disabled = false;
+                discoverButton.classList.add("enabled");
+            } else if (score === 2) {
+                alert("2 su 3! Hai vinto il premio! :(((((( Ora puoi cliccare su 'Scopri il tuo regalo'.");
+                discoverButton.disabled = false;
+                discoverButton.classList.add("enabled");
+            } else if (score === 1) {
+                alert("1 su 3! Hai vinto solo un bacio! Non puoi scoprire il regalo (MI DISP). Riprova per scoprire il regalo!");
+            } else {
+                alert("0 su 3! Hai vinto 8 minuti di solletico! Non puoi scoprire il regalo (EHEHEHEH). Riprova per scoprire il regalo!");
+            }
+        }
+    </script>
+</head>
+<body class="background-regalo">
+    <div class="content-container text-background">
+        <h1 style="font-size: 50px;">QUIZ</h1>
+        <p>Vediamo quante ne sai   :p</p>
+
+        <!-- Sezione del quiz -->
+        <div>
+            <p><strong>Domanda 1:</strong> Chi ha vinto i mondiali maschili di pallanuoto di Gwangju nel 2019?</p>
+            <input type="text" id="quiz-answer-1" placeholder="Risposta qui">
+
+            <p><strong>Domanda 2:</strong> Con quale dolce gesto ti sei fatta notare da me per la prima volta? <br> (verbo al gerundio)</p>
+            <input type="text" id="quiz-answer-2" placeholder="Risposta qui">
+
+            <p><strong>Domanda 3:</strong> Qual è la capitale della Turchia?</p>
+            <input type="text" id="quiz-answer-3" placeholder="Risposta qui">
+        </div>
+
+
+        <!-- Aggiungere una riga vuota per spazio -->
+        <div style="height: 35px;"></div>
+
+        <!-- Pulsanti disposti verticalmente e centrati -->
+        <div style="text-align: center;">
+            <button onclick="checkAnswers()" style="margin-bottom: 15px;">Verifica le risposte</button>
+            <button id="discover-button" onclick="window.location.href='praga.html'" disabled>Scopri il tuo regalo</button>
+        </div>
+    </div>
+</body>
+</html>

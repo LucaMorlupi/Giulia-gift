@@ -1,0 +1,86 @@
+/* Import dei font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* CSS Globale */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('pragawallpaper.jpg'); /* Usa l'immagine di sfondo generata */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenitore del contenuto */
+.content-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo semitrasparente */
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    max-width: 70%;
+}
+
+/* Stili per il testo */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #E0E0E0;
+    margin-bottom: 25px;
+}
+
+/* Pulsante per continuare */
+button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #FF6347; /* Rosso acceso per catturare l'attenzione */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #FF4500; /* Colore più scuro al passaggio del mouse */
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+.defilato {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #FF6347;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Porta il pulsante in primo piano rispetto ad altri elementi */
+}
+
+.defilato:hover {
+    background-color: #FF4500;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
